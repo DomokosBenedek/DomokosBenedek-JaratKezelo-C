@@ -21,6 +21,14 @@ namespace JaratKezeloProject
                 Keses = 0
             };
         }
+        private class Jarat
+        {
+            public string JaratSzam { get; set; }
+            public string RepterHonnan { get; set; }
+            public string RepterHova { get; set; }
+            public DateTime Indulas { get; set; }
+            public int Keses { get; set; }
+        }
 
         public void Keses(string jaratSzam, int keses)
         {
@@ -33,13 +41,29 @@ namespace JaratKezeloProject
                 throw new ArgumentException("A késés nem lehet negatív.");
         }
 
-        private class Jarat
+        public DateTime MikorIndul(string jaratSzam)
         {
-            public string JaratSzam { get; set; }
-            public string RepterHonnan { get; set; }
-            public string RepterHova { get; set; }
-            public DateTime Indulas { get; set; }
-            public int Keses { get; set; }
+            if (!jaratok.ContainsKey(jaratSzam))
+                throw new ArgumentException("Nem létező járat.");
+
+            var jarat = jaratok[jaratSzam];
+            return jarat.Indulas.AddMinutes(jarat.Keses);
         }
+
+        public List<string> JaratokRepuloterrol(string repter)
+        {
+            var result = new List<string>();
+
+            foreach (var jarat in jaratok.Values)
+            {
+                if (jarat.RepterHonnan == repter)
+                {
+                    result.Add(jarat.JaratSzam);
+                }
+            }
+
+            return result;
+        }
+
     }
 }
