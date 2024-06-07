@@ -1,12 +1,12 @@
-using System;
+ï»¿using System;
 using Xunit;
 using JaratKezeloProject;
+using System.Collections.Generic;
 
-namespace TestJaratKezeloProject
+namespace TestJaratKezeloProject.Tests
 {
-    public class UnitTest1
+    public class JaratKezeloTests
     {
-        // UjJarat_Letrehoz_Es_Tarol: Teszteli, hogy új járatot helyesen létrehozza és tárolja.
         [Fact]
         public void UjJarat_Letrehoz_Es_Tarol()
         {
@@ -16,7 +16,6 @@ namespace TestJaratKezeloProject
             jaratKezelo.Keses("ABC123", 0);
         }
 
-        // Keses_Hozzaadodik: Teszteli, hogy a késés helyesen hozzáadódik egy járathoz.
         [Fact]
         public void Keses_Hozzaadodik()
         {
@@ -27,7 +26,6 @@ namespace TestJaratKezeloProject
             jaratKezelo.Keses("ABC123", 0);
         }
 
-        // Keses_Nem_Lehet_Negativ: Teszteli, hogy a késés nem lehet negatív.
         [Fact]
         public void Keses_Nem_Lehet_Negativ()
         {
@@ -37,7 +35,6 @@ namespace TestJaratKezeloProject
             Assert.Throws<ArgumentException>(() => jaratKezelo.Keses("ABC123", -10));
         }
 
-        // UjJarat_Duplikalt_JaratSzam: Teszteli, hogy duplikált járatszám esetén kivételt dob.
         [Fact]
         public void UjJarat_Duplikalt_JaratSzam()
         {
@@ -47,7 +44,6 @@ namespace TestJaratKezeloProject
             Assert.Throws<ArgumentException>(() => jaratKezelo.UjJarat("ABC123", "BUD", "JFK", DateTime.Now));
         }
 
-        // MikorIndul_HelyesIdopontotAdVissza: Teszteli, hogy a tényleges indulási idõpont helyesen számolódik ki.
         [Fact]
         public void MikorIndul_HelyesIdopontotAdVissza()
         {
@@ -60,15 +56,6 @@ namespace TestJaratKezeloProject
             Assert.Equal(varhatoIndulas, jaratKezelo.MikorIndul("ABC123"));
         }
 
-        // MikorIndul_NemLetezoJarat: Teszteli, hogy nem létezõ járat esetén kivételt dob.
-        [Fact]
-        public void MikorIndul_NemLetezoJarat()
-        {
-            var jaratKezelo = new JaratKezelo();
-            Assert.Throws<ArgumentException>(() => jaratKezelo.MikorIndul("XYZ999"));
-        }
-
-        // JaratokRepuloterrol_HelyesJaratokatAdVissza: Teszteli, hogy a megadott repülõtérrõl induló járatok helyesen visszaadódnak.
         [Fact]
         public void JaratokRepuloterrol_HelyesJaratokatAdVissza()
         {
@@ -84,7 +71,13 @@ namespace TestJaratKezeloProject
             Assert.DoesNotContain("GHI789", jaratok);
         }
 
-        // JaratokRepuloterrol_UresLista: Teszteli, hogy nem létezõ repülõtér esetén üres listát ad vissza.
+        [Fact]
+        public void MikorIndul_NemLetezoJarat()
+        {
+            var jaratKezelo = new JaratKezelo();
+            Assert.Throws<ArgumentException>(() => jaratKezelo.MikorIndul("XYZ999"));
+        }
+
         [Fact]
         public void JaratokRepuloterrol_UresLista()
         {
