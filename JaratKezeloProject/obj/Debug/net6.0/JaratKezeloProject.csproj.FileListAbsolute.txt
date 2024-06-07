@@ -1,0 +1,11 @@
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\bin\Debug\net6.0\JaratKezeloProject.deps.json
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\bin\Debug\net6.0\JaratKezeloProject.dll
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\bin\Debug\net6.0\JaratKezeloProject.pdb
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\JaratKezeloProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\JaratKezeloProject.AssemblyInfoInputs.cache
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\JaratKezeloProject.AssemblyInfo.cs
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\JaratKezeloProject.csproj.CoreCompileInputs.cache
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\JaratKezeloProject.dll
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\refint\JaratKezeloProject.dll
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\JaratKezeloProject.pdb
+C:\Users\bened\source\repos\JaratKezeloProject\JaratKezeloProject\obj\Debug\net6.0\ref\JaratKezeloProject.dll
